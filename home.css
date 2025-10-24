@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, gray 0%, black 100%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    font-size: clamp(1.5em, 4vw, 2.5em);
+    color: #fff;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav a {
+    padding: 10px 20px;
+    background-color: #666;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+}
+
+.nav a:hover {
+    background-color: #888;
+}
+
+.books {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.book {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    flex: 1 1 250px;
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.book-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.book-chapters {
+    font-size: .9em;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+.book-description {
+    font-size: .8em;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.back-button {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #666;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    background-color: #888;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        width: 95%;
+    }
+
+    .nav a {
+        min-width: 100px;
+        padding: 8px 15px;
+    }
+
+    .book {
+        flex: 1 1 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav a {
+        width: 80%;
+    }
+
+    .book {
+        flex: 1 1 100%;
+    }
+}
